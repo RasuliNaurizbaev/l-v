@@ -40,8 +40,8 @@
 
         <v-navigation-drawer :color="themeColors.navDrawer" location="right" permanent>
             <v-list>
-                <v-list-item prepend-avatar="https://randomuser.me/api/portraits/women/82.jpg" title="Jane Smith"
-                    subtitle="ログインした"></v-list-item>
+                <v-list-item prepend-avatar="https://randomuser.me/api/portraits/women/82.jpg" :title="firstName"
+                subtitle="ログインした"></v-list-item>
             </v-list>
 
             <v-divider></v-divider>
@@ -53,6 +53,12 @@
                     :active="currentPage === 'account'" @click="currentPage = 'account'"></v-list-item>
                 <v-list-item prepend-icon="mdi-account-group-outline" title="ユーザー" value="users"
                     :active="currentPage === 'users'" @click="currentPage = 'users'"></v-list-item>
+                <v-list-item prepend-icon="mdi-cog-outline" title="設定" value="settings"
+                    :active="currentPage === 'settings'" @click="currentPage = 'settings'"></v-list-item>
+                <v-list-item prepend-icon="mdi-help-circle" title="ヘルプ" value="help"
+                    :active="currentPage === 'help'" @click="currentPage = 'help'"></v-list-item>
+                <v-list-item prepend-icon="mdi-logout" title="ログアウト" value="logout"
+                    :active="currentPage === 'logout'" @click="logout"></v-list-item>
             </v-list>
         </v-navigation-drawer>
 
@@ -94,21 +100,21 @@
                             :class="{ 'light-theme': themeMode === 'light', 'dark-theme': themeMode === 'dark' }">
                         <v-btn>
                             <v-icon>mdi-gamepad-outline</v-icon>
-                            2048
+                            2048ゲーム
                         </v-btn>
                         </Link>
-                        <Link href="/" class="no-style-link"
+                        <Link href="/game2" class="no-style-link"
                             :class="{ 'light-theme': themeMode === 'light', 'dark-theme': themeMode === 'dark' }">
                         <v-btn>
                             <v-icon>mdi-gamepad-outline</v-icon>
-                            まだ無い
+                            数字当て
                         </v-btn>
                         </Link>
-                        <Link href="/" class="no-style-link"
+                        <Link href="/game3" class="no-style-link"
                             :class="{ 'light-theme': themeMode === 'light', 'dark-theme': themeMode === 'dark' }">
                         <v-btn>
                             <v-icon>mdi-gamepad-outline</v-icon>
-                            まだ無い
+                            単語当て
                         </v-btn>
                         </Link>
                     </v-bottom-navigation>
@@ -131,10 +137,14 @@
 
 <script setup>
 import { ref, computed } from 'vue';
-import { Link } from '@inertiajs/vue3';
+import { Link, router } from '@inertiajs/vue3';
 import '@mdi/font/css/materialdesignicons.css'; // Import MDI icons
 import Sheet from '../Components/Sheet.vue';
 const active = ref(false)
+
+// Get current user
+const user = JSON.parse(localStorage.getItem('user'));
+const firstName = ref(user ? user.firstName : '');
 
 // Theme mode (light/dark)
 const themeMode = ref('light');
@@ -224,6 +234,13 @@ const links = [
     'ブログ',
     '連絡先',
 ];
+
+// Logout function
+const logout = () => {
+    localStorage.removeItem('token');
+    router.visit("/login");
+    console.log('Logging out...');
+};
 </script>
 
 <style>

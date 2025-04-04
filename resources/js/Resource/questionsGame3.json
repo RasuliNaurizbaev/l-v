@@ -1,0 +1,72 @@
+[
+    { 
+      "question": "日本の首都は何ですか？", 
+      "answer": "東京", 
+      "hint": "この都市は日本の首都で、観光地やビジネスの中心地でもあります。",
+      "info": "東京は日本の首都で、世界でも最も人口が多い都市の一つです。",
+      "imageUrl": "https://example.com/tokyo-image.jpg" 
+    },
+    { 
+      "question": "日本の国技は何ですか？", 
+      "answer": "相撲", 
+      "hint": "日本の伝統的なスポーツで、特に力士が有名です。",
+      "info": "相撲は日本の伝統的な格闘技で、古代から続いています。",
+      "imageUrl": "https://example.com/sumo-image.jpg" 
+    },
+    { 
+      "question": "最も人気のある日本の花は何ですか？", 
+      "answer": "桜", 
+      "hint": "春に咲き、花見が楽しめる美しい花です。",
+      "info": "桜は春に咲き、毎年日本中で花見が行われます。",
+      "imageUrl": "https://example.com/sakura-image.jpg" 
+    },
+    { 
+      "question": "日本の天皇の名前は何ですか？", 
+      "answer": "徳仁", 
+      "hint": "現在の天皇で、平成時代の終わりに即位しました。",
+      "info": "徳仁天皇は、平成時代の終わりに即位した現在の天皇です。",
+      "imageUrl": "https://example.com/tenno-image.jpg" 
+    },
+    { 
+      "question": "日本の最大の島は何ですか？", 
+      "answer": "本州", 
+      "hint": "この島は日本の経済と文化の中心地です。",
+      "info": "本州は日本の最も大きな島で、経済的にも文化的にも重要な役割を果たしています。",
+      "imageUrl": "https://example.com/honshu-image.jpg" 
+    },
+    { 
+      "question": "フランスの首都はどこですか？", 
+      "answer": "パリ", 
+      "hint": "この都市はエッフェル塔で有名です。",
+      "info": "パリはフランスの首都で、世界的な観光名所や芸術の中心地として知られています。",
+      "imageUrl": "https://example.com/paris-image.jpg" 
+    },
+    { 
+      "question": "地球で最も高い山は何ですか？", 
+      "answer": "エベレスト", 
+      "hint": "この山はヒマラヤ山脈にあり、標高は約8,848メートルです。",
+      "info": "エベレスト山は、世界で最も高い山であり、登山家たちにとって挑戦的な場所として知られています。",
+      "imageUrl": "https://example.com/everest-image.jpg" 
+    },
+    { 
+      "question": "アメリカの独立記念日はいつですか？", 
+      "answer": "7月4日", 
+      "hint": "この日はアメリカ合衆国の独立宣言が署名された日です。",
+      "info": "アメリカの独立記念日である7月4日は、アメリカの歴史で最も重要な日となっています。",
+      "imageUrl": "https://example.com/independence-day-image.jpg" 
+    },
+    { 
+      "question": "最も長い川はどれですか？", 
+      "answer": "ナイル川", 
+      "hint": "この川はアフリカ大陸を流れ、長さは6,650キロメートルです。",
+      "info": "ナイル川は世界最長の川として知られ、その流域には古代文明が栄えました。",
+      "imageUrl": "https://example.com/nile-river-image.jpg" 
+    },
+    { 
+      "question": "世界で最も人口の多い国はどこですか？", 
+      "answer": "中国", 
+      "hint": "この国の人口は約14億人以上です。",
+      "info": "中国は、世界で最も人口が多い国で、経済大国としても知られています。",
+      "imageUrl": "https://example.com/china-image.jpg" 
+    }
+  ]

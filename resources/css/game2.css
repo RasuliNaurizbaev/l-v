@@ -1,0 +1,15 @@
+.v-card {
+    transition: transform 0.3s;
+  }
+  
+  .v-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .v-btn {
+    transition: all 0.3s;
+  }
+  
+  .v-btn:hover {
+    transform: scale(1.05);
+  }

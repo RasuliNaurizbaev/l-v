@@ -83,7 +83,7 @@ const showMore = (tabKey) => {
   visibleCount.value[tabKey] += 6;
 };
 
-const API_KEY = '388eb2d2e94948f9af6de910a7b539bd';
+// const API_KEY = '388eb2d2e94948f9af6de910a7b539bd';
 const BASE_URL = 'https://newsapi.org/v2/top-headlines';
 
 const fetchNews = async (category, tabKey) => {

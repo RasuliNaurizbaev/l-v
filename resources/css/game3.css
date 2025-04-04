@@ -1,0 +1,222 @@
+.game-container {
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    background: linear-gradient(to bottom, #fdfdfd, #f8f9fa);
+    position: relative;
+  }
+  
+  .game-header {
+    padding: 24px 24px 0 24px;
+    position: relative;
+  }
+  
+  .title {
+    background: linear-gradient(90deg, #6200ea, #3700b3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: titlePulse 2s infinite alternate;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .score-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  
+  .score-label {
+    font-size: 1rem;
+    margin-right: 8px;
+    color: #666;
+  }
+  
+  .score-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6200ea;
+  }
+  
+  .question-section {
+    text-align: center;
+    padding: 16px 0;
+  }
+  
+  .question-text {
+    color: #333;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  
+  .input-field {
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-btn {
+    max-width: 300px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(98, 0, 234, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(98, 0, 234, 0.3);
+  }
+  
+  .hint-section {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .hint-alert {
+    border-width: 4px;
+  }
+  
+  .hint-content {
+    padding: 8px 0;
+    line-height: 1.6;
+  }
+  
+  .game-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .attempts-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .attempts-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  
+  .attempts-icons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hint-btn {
+    transition: all 0.3s ease;
+  }
+  
+  .hint-btn:hover {
+    background-color: rgba(255, 193, 7, 0.1);
+  }
+  
+  .result-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px;
+    text-align: center;
+  }
+  
+  .answer-reveal {
+    margin: 16px 0;
+    line-height: 1.6;
+  }
+  
+  .secret-word {
+    font-weight: bold;
+    color: #6200ea;
+    font-size: 1.2em;
+  }
+  
+  .info-card {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .image-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .result-img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.5s ease;
+  }
+  
+  .result-img:hover {
+    transform: scale(1.02);
+  }
+  
+  .action-buttons {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 16px;
+  }
+  
+  .stats-container {
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(to bottom, #fdfdfd, #f5f7fa);
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 8px 0;
+  }
+  
+  .stat-item {
+    text-align: center;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: rgba(98, 0, 234, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .stat-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .stat-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #6200ea;
+    margin-bottom: 8px;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Animations */
+  @keyframes titlePulse {
+    0% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s ease;
+  }
+  
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }

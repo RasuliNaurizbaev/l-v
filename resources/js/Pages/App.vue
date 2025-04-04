@@ -249,19 +249,17 @@ const links = [
     align-items: center;
 }
 
-/* Плавная анимация высоты */
+
 .transition-height {
     transition: height 0.3s ease-in-out;
 }
 
 
-/* Стиль для кнопки в светлой теме */
 .btn-game.light-theme {
     background-color: #fff; 
     color: indigo; 
 }
 
-/* Стиль для кнопки в темной теме */
 .btn-game.dark-theme {
     background-color: #333; 
     color: #6ff8da;
@@ -274,12 +272,10 @@ const links = [
 
 .no-style-link.light-theme {
     color: indigo;
-    /* Цвет для светлой темы */
 }
 
 .no-style-link.dark-theme {
     color: #6ff8da;
-    /* Цвет для темной темы */
 }
 
 

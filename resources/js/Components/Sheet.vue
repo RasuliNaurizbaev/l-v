@@ -56,9 +56,9 @@ const props = defineProps({
 const tab = ref('tab-1');
 
 const tabs = [
-  { icon: 'mdi-code-braces', text: 'In IT', value: 'tab-1' },
-  { icon: 'mdi-earth', text: 'In World', value: 'tab-2' },
-  { icon: 'mdi-book-open-page-variant', text: 'Others', value: 'tab-3' }
+  { icon: 'mdi-code-braces', text: 'IT分野', value: 'tab-1' },
+  { icon: 'mdi-earth', text: 'すべて', value: 'tab-2' },
+  { icon: 'mdi-book-open-page-variant', text: '科学', value: 'tab-3' }
 ];
 
 const news = ref({
@@ -83,7 +83,7 @@ const showMore = (tabKey) => {
   visibleCount.value[tabKey] += 6;
 };
 
-// const API_KEY = '388eb2d2e94948f9af6de910a7b539bd';
+const API_KEY = '388eb2d2e94948f9af6de910a7b539bd';
 const BASE_URL = 'https://newsapi.org/v2/top-headlines';
 
 const fetchNews = async (category, tabKey) => {

@@ -1,10 +1,10 @@
-
 import { defineStore } from 'pinia';
-import { ref, computed } from 'vue';
+import { ref, computed, watch } from 'vue';
 
 export const useThemeStore = defineStore('theme', () => {
-  const themeMode = ref('light');
-  const currentTheme = ref('Default');
+  // Initialize from localStorage (or use default values)
+  const themeMode = ref(localStorage.getItem('themeMode') || 'light');
+  const currentTheme = ref(localStorage.getItem('currentTheme') || 'Default');
 
   const availableThemes = [
     {
@@ -53,8 +53,9 @@ export const useThemeStore = defineStore('theme', () => {
     },
   ];
 
+  // Computed theme colors that depend on the current theme and mode.
   const themeColors = computed(() => {
-    const theme = availableThemes.find((t) => t.name === currentTheme.value);
+    const theme = availableThemes.find((t) => t.name === currentTheme.value) || availableThemes[0];
     const isDark = themeMode.value === 'dark';
     return {
       ...theme,
@@ -64,6 +65,14 @@ export const useThemeStore = defineStore('theme', () => {
       contentArea: isDark ? '#1E1E1E' : theme.contentArea,
       footer: isDark ? '#1E1E1E' : '#F5F5F5',
     };
+  });
+
+  // Watch for changes and update localStorage
+  watch(themeMode, (newVal) => {
+    localStorage.setItem('themeMode', newVal);
+  });
+  watch(currentTheme, (newVal) => {
+    localStorage.setItem('currentTheme', newVal);
   });
 
   return {

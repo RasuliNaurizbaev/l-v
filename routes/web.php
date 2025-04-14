@@ -25,6 +25,9 @@ Route::get("/game3", function(){
 Route::get("/settings", function(){
     return Inertia::render("Settings");
 });
+Route::get("/help", function(){
+    return Inertia::render("FAQ");
+});
 
 Route::get("/test", function(){
     return Inertia::render("Test");

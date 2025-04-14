@@ -56,7 +56,7 @@
                 <v-list-item prepend-icon="mdi-cog-outline" title="設定" value="settings"
                     :active="currentPage === 'settings'" @click="settingsPage"></v-list-item>
                 <v-list-item prepend-icon="mdi-help-circle" title="ヘルプ" value="help" :active="currentPage === 'help'"
-                    @click="currentPage = 'help'"></v-list-item>
+                    @click="FAQPage"></v-list-item>
                 <v-list-item prepend-icon="mdi-logout" title="ログアウト" value="logout" :active="currentPage === 'logout'"
                     @click="logout"></v-list-item>
             </v-list>
@@ -239,6 +239,11 @@ const links = [
 const settingsPage = () => {
     router.visit("/settings");
 };
+
+// FAQ page
+const FAQPage = () =>{
+    router.visit("/help");
+}
 
 // Logout function
 const logout = () => {

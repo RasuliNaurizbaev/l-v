@@ -1,4 +1,5 @@
 import { createApp, h, ref, provide } from 'vue'
+import { createPinia } from 'pinia';
 import { createInertiaApp } from '@inertiajs/vue3'
 import vuetify from './vuetify'
 
@@ -14,11 +15,11 @@ createInertiaApp({
         isDark.value = !isDark.value;
         localStorage.setItem('theme', isDark.value ? 'dark' : 'light');
     };
-
+    const pinia = createPinia();
     const app = createApp({ render: () => h(App, props) });
 
     app.provide('theme', { isDark, toggleTheme });
 
-    app.use(plugin).use(vuetify).mount(el);
+    app.use(plugin).use(vuetify).use(pinia).mount(el);
   },
 })

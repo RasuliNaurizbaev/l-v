@@ -28,7 +28,7 @@ Route::get("/game4", function(){
 Route::get("/settings", function(){
     return Inertia::render("Settings");
 });
-Route::get("/help", function(){
+Route::get("/faq", function(){
     return Inertia::render("FAQ");
 });
 

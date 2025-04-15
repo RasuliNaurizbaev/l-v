@@ -49,7 +49,7 @@
           <v-list-item prepend-icon="mdi-account" title="マイアッカウンター" value="account" :active="currentPage === 'account'" @click="currentPage = 'account'"></v-list-item>
           <v-list-item prepend-icon="mdi-account-group-outline" title="ユーザー" value="users" :active="currentPage === 'users'" @click="currentPage = 'users'"></v-list-item>
           <v-list-item prepend-icon="mdi-cog-outline" title="設定" value="settings" :active="currentPage === 'settings'" @click="settingsPage"></v-list-item>
-          <v-list-item prepend-icon="mdi-help-circle" title="ヘルプ" value="help" :active="currentPage === 'help'" @click="FAQPage"></v-list-item>
+          <v-list-item prepend-icon="mdi-help-circle" title="ヘルプ" value="faq" :active="currentPage === 'faq'" @click="FAQPage"></v-list-item>
           <v-list-item prepend-icon="mdi-logout" title="ログアウト" value="logout" :active="currentPage === 'logout'" @click="logout"></v-list-item>
         </v-list>
       </v-navigation-drawer>
@@ -228,7 +228,7 @@
   };
   
   const FAQPage = () => {
-    router.visit('/help');
+    router.visit('/faq');
   };
   
   const logout = () => {

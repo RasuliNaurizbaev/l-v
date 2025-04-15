@@ -5,6 +5,7 @@
       <v-container class="content-container py-10">
         <v-card class="mx-auto pa-6 rounded-xl shadow-xl" max-width="600" elevation="4">
           <v-card-title class="text-h5 font-semibold mb-4">ユーザー設定</v-card-title>
+          
           <v-divider class="my-4"></v-divider>
 
           <v-text-field label="名前" v-model="userName" prepend-inner-icon="mdi-account" variant="outlined"
